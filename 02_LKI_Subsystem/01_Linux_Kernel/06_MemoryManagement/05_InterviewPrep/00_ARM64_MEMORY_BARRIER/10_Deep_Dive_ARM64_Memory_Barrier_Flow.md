@@ -4,9 +4,9 @@
 graph TD
 	A[CPU1: x = 1] --> B["CPU1: smp_wmb()"]
 	B --> C[CPU1: flag = 1]
-	C --> D[CPU2: if "(flag)"]
-	D --> E[CPU2: smp_rmb()]
-	E --> F[CPU2: assert(x == 1)]
+	C --> D["CPU2: if (flag)"]
+	D --> E["CPU2: smp_rmb()"]
+	E --> F["CPU2: assert(x == 1)"]
 	style B fill:#f9f,stroke:#333,stroke-width:2px
 	style E fill:#f9f,stroke:#333,stroke-width:2px
 ```
