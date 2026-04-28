@@ -2,7 +2,7 @@
 
 ```mermaid
 graph TD
-	A[CPU1: x = 1] --> B[CPU1: smp_wmb()]
+	A[CPU1: x = 1] --> B["CPU1: smp_wmb()"]
 	B --> C[CPU1: flag = 1]
 	C --> D[CPU2: if (flag)]
 	D --> E[CPU2: smp_rmb()]
